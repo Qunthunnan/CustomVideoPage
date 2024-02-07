@@ -1,0 +1,23 @@
+@import '~bootstrap/dist/css/bootstrap-reboot.min.css';
+@import 'blocks/fonts';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    width: 1520px;
+    margin: 0px auto;
+}
+
+
+@import 'blocks/content';
+@import 'blocks/comments';
+@import 'blocks/video';

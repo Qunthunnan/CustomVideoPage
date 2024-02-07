@@ -1,0 +1,11 @@
+.content {
+    padding: 60px 0 100px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 950px;
+    }
+}
