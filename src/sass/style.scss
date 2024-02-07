@@ -7,9 +7,26 @@
     font-family: 'Montserrat';
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a:link, a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
 body {
     background-color: #000;
     color: #fff;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -17,7 +34,7 @@ body {
     margin: 0px auto;
 }
 
-
+@import 'variables';
 @import 'blocks/content';
 @import 'blocks/comments';
 @import 'blocks/video';
