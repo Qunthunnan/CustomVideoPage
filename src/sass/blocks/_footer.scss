@@ -1,0 +1,68 @@
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid #454545;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__contacts {
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(2, auto);
+        column-gap: 59px;
+        row-gap: 42px;
+    }
+
+    &__label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #A3A3A3;
+    }
+    &__number {
+        margin: 8px 0 0 0;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    &__social_btn {
+        background: none;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+        border: 1px solid #fff;
+        outline: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        width: 189px;
+    }
+    &__email {
+        font-size: 20px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        column-gap: 11px;
+    }
+    &__oferta_link {
+        display: block;
+        margin: 8px 0 0 0;
+    }
+    &__oferta {
+        margin: 10px 0 0 0;
+    }
+    &__oferta_link {
+        margin: 15px 0 0 0;
+        &:first-child {
+            margin: 0;
+        }
+    }
+    &__oferta_link, &__rights {
+        text-align: right;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    &__rights {
+        margin: 13px 0 0 0;
+    }
+}

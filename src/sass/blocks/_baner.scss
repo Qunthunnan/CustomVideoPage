@@ -1,0 +1,101 @@
+.banner {
+    display: flex;
+    margin: 25px 0 0 0;
+    padding: 9px 74px 9px 20px;
+    column-gap: 40px;
+    background: url('@/images/baner_bg.png') right/contain no-repeat, #272727;
+
+    &__left {
+        width: 276px;
+
+        .banner__descr {
+            margin: 15px 0 0 0;
+        }
+    }
+    &__label {
+        display: flex;
+        column-gap: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        &_circle {
+            margin: 6px 0 0 0;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: var(--general-purple);
+        }
+    }
+    &__name {
+        font-family: 'Bebas Neue';
+        color: var(--general-purple);
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 700;
+    }
+
+    &__right {
+        margin: 14px 0 0 0;
+    }
+
+    &__descr {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    &__default_bold {
+        font-weight: 700;
+    }
+    &__purple_bold {
+        font-weight: 700;
+        color: var(--general-purple);
+    }
+    &__btn {
+        text-transform: uppercase;
+        margin: 12px 0 0 0;
+        display: block;
+        border: none;
+        background: var(--general-purple);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 13px 0;
+        width: 300px;
+    }
+}
+
+@media (max-width: 1599px) {
+    .banner {
+        &__name {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 1399px) {
+    .banner {
+        &__left {
+            width: 369px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .banner {
+        background: url('@/images/baner_bg.png') right/cover no-repeat, #272728;
+        column-gap: 20px;
+        &__btn {
+            margin: 47px 0 0 0px;
+        }
+        &__left {
+            width: 220px;
+        }
+        &__name {
+            margin: 5px 0 0 0;
+        }
+        &__descr {
+            margin: 10px 0 0 0;
+        }
+    }
+    
+
+}

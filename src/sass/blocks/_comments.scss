@@ -1,13 +1,17 @@
 .comments {
     width: 520px;
-    background-color: var(--general-gray);
-    padding: 30px 20px 22px;
-
+    &__wrapper {
+        min-height: 430px;
+        max-height: 100%;
+        padding: 30px 20px 22px;
+        background-color: var(--general-gray);
+    }
+    
     label {
         display: block;
     }
 
-    .comments__input {
+    &__input {
         background-color: var(--light-gray);
         border: none;
         color: #fff;
@@ -30,19 +34,19 @@
         padding: 20px;
     }
 
-    .comments__input_descr {
+    &__input_descr {
         font-size: 16px;
         font-weight: 400;
         margin: 24px 0 0 0;
     }
 
-    .comments__socials {
+    &__socials {
         margin: 12px 0 0 0;
         display: flex;
         column-gap: 24px;
     }
 
-    .comments__name {
+    &__name {
         margin: 14px 0 0 0;
         display: flex;
         align-items: center;
@@ -55,7 +59,7 @@
         }
     }
 
-    .comments__send {
+    &__send {
         margin: 20px 0 0 0;
         display: block;
         border: none;
@@ -69,6 +73,13 @@
     &__messages {
         margin: 26px 0 0 0;
         list-style: none;
+        overflow: overlay;
+        max-height: 71vh;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 }
 
@@ -76,7 +87,6 @@
 .comment {
     width: 100%;
     display: flex;
-    column-gap: 10px;
     margin: 18px 0 0 0;
 
     &:first-child {
@@ -85,10 +95,11 @@
 
     &__content {
         flex-grow: 1;
-        flex-basis: content;
+        flex-basis: min-content;
     }
 
     &__avatar {
+        margin: 0 10px 0 0;
         border-radius: 50%;
         object-fit: cover;
         height: 50px;
@@ -129,13 +140,15 @@
     &__reply_btn {
         cursor: pointer;
         display: flex;
-        column-gap: 3px;
+        column-gap: 9px;
     }
 
     &__reply_btn_text {
         color: rgba(255, 255, 255, 0.5);
         font-size: 14px;
         font-weight: 400;
+        display: flex;
+        align-items: center;
     }
 
     &__dislike, &__like {
@@ -153,5 +166,45 @@
 
     &__options {
         cursor: pointer;
+    }
+}
+
+@media (max-width: 1599px) {
+    .comments {
+        width: 440px;
+        &__name {
+            input {
+                width: 352px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1399px) {
+    .comments {
+        width: 387px;
+        &__name {
+            input {
+                width: 280px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .comments {
+        width: 350px;
+        &__wrapper {
+            padding: 20px 15px 20px;
+        }
+        &__socials {
+            column-gap: 0px;
+            justify-content: space-between;
+        }
+        &__name {
+            input {
+                width: 250px;
+            }
+        }
     }
 }
