@@ -1,0 +1,186 @@
+.banner {
+    display: none;
+    &.active {
+        display: flex;
+    }
+    margin: 25px 0 0 0;
+    padding: 9px 20px;
+    column-gap: 40px;
+    background: url('@/images/baner_bg.png') right/contain no-repeat, #272727;
+
+    &__mobile {
+        display: none;
+    }
+    &__left {
+        width: 276px;
+
+        .banner__descr {
+            margin: 15px 0 0 0;
+        }
+    }
+    &__label {
+        display: flex;
+        column-gap: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        &_circle {
+            margin: 6px 0 0 0;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: var(--general-purple);
+        }
+    }
+    &__name {
+        font-family: 'Bebas Neue';
+        color: var(--general-purple);
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 700;
+    }
+
+    &__right {
+        margin: 14px 0 0 0;
+    }
+
+    &__descr {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    &__default_bold {
+        font-weight: 700;
+    }
+    &__purple_bold {
+        font-weight: 700;
+        color: var(--general-purple);
+    }
+    &__btn {
+        text-transform: uppercase;
+        margin: 12px 0 0 0;
+        display: block;
+        border: none;
+        background: var(--general-purple);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 13px 0;
+        width: 300px;
+    }
+}
+
+@media (max-width: 1599px) {
+    .banner {
+        &__name {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 1399px) {
+    .banner {
+        column-gap: 10px;
+        &__left {
+            width: 277px;
+        }
+
+    }
+}
+
+@media (max-width: 1200px) {
+    .banner {
+        background: url('@/images/baner_bg.png') right/cover no-repeat, #272727;
+        column-gap: 20px;
+        &__btn {
+            margin: 19px 0 0 0px;
+        }
+        &__left {
+            width: 220px;
+        }
+        &__right {
+            width: 248px;
+        }
+        &__name {
+            margin: 5px 0 0 0;
+        }
+        &__descr {
+            margin: 10px 0 0 0;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .banner {
+        padding: 20px 10px 26px;
+        flex-direction: column;
+        row-gap: 15px;
+        background: url('@/images/alex_mobile.png') right/contain no-repeat, #272727;
+        &__left {
+            width: 73%;
+        }
+        &__mobile {
+            display: block;
+            width: 220px;
+            padding: 0px 5px;
+            border: 1px solid var(--general-purple);
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 10px 10px 47px 1px rgba(86, 0, 225, 0.2);
+        }
+        &__right {
+            margin: 0;
+            width: 100%;
+            .banner__descr {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .banner {
+        background: url('@/images/alex_mobile.png') right bottom /43% no-repeat, #272727;
+        margin: 13px 0 0 0;
+        &__label {
+            font-size: 12px;
+            font-weight: 500;
+            &_circle {
+                display: none;
+            }
+        }
+        &__name {
+            margin: 0;
+            font-size: 30px;
+            line-height: 30px;
+        }
+        &__left {
+            width: 78%;
+            .banner__descr {
+                font-size: 12px;
+                margin: 2px 0 0 0;
+            }
+        }
+        &__default_bold, &__purple_bold {
+            font-weight: 600;
+        }
+        &__mobile {
+            width: 180px;
+            line-height: 13px;
+            font-size: 10px;
+            padding: 6px 5px;
+        }
+        &__btn {
+            margin: 0px;
+            font-size: 14px;
+            width: 100%;
+            padding: 15px 0px;
+        }
+    }
+}
+
+@media (max-width: 466px) {
+    .banner {
+        background: url('@/images/alex_mobile.png') right bottom 27px/50% no-repeat, #272727;
+    }
+}

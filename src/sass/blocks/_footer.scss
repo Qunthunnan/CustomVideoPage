@@ -66,3 +66,78 @@
         margin: 13px 0 0 0;
     }
 }
+
+@media (max-width: 1199px) { 
+    .footer {
+        &__oferta_link, &__rights {
+            font-size: 17px;
+        }
+        &__email {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 991px) { 
+    .footer {
+        padding: 30px 0;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__contacts {
+            row-gap: 20px;
+            column-gap: 50px;
+            justify-content: space-between;
+        }
+        &__oferta {
+            margin: 20px 0 0;
+        }
+        &__oferta_link, &__rights {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 575px) { 
+    .footer {
+        padding: 41px 0;
+        &__contacts {
+            column-gap: 0;
+            row-gap: 36px;
+        }
+        &__contact_block:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            .footer__label {
+                margin: 0 0 0 21px;
+            }
+            .footer__number {
+                margin: 3px 0 0;
+                align-self: flex-end;
+            }
+        }
+        &__label {
+            font-size: 10px;
+        }
+        &__number {
+            font-size: 14px;
+        }
+        &__email {
+            font-size: 10px;
+            order: 3;
+        }
+        &__social_btn {
+            width: 140px;
+            font-size: 12px;
+            order: 4;
+            column-gap: 8px ;
+        }
+        &__oferta {
+            margin: 34px 0 0;
+        }
+        &__oferta_link, &__rights {
+            font-size: 10px;
+            margin: 22px 0 0 0;
+        }
+    }    
+}

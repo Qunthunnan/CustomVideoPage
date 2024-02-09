@@ -2,34 +2,72 @@
     padding: 60px 0 50px 0;
     &__wrapper {
         display: flex;
-        justify-content: space-between;
-    }
-
-    &__left {
-        width: 950px;
+        row-gap: 40px;
+        &:has(.comments.active) {
+            column-gap: 50px;
+        }
     }
 }
 
 @media (max-width: 1599px) {
     .content {
-        &__left {
-            width: 818px;
+        &__wrapper {
+            display: flex;
+            &:has(.comments.active) {
+                column-gap: 40px;
+            }
         }
     }
 }
 
 @media (max-width: 1399px) {
     .content {
-        &__left {
-            width: 706px;
+        &__wrapper {
+            display: flex;
+            &:has(.comments.active) {
+                column-gap: 30px;
+            }
         }
     }
 }
 
 @media (max-width: 1199px) {
     .content {
-        &__left {
-            width: 585px;
+        &__wrapper {
+            display: flex;
+            &:has(.comments.active) {
+                column-gap: 20px;
+            }
         }
+    }
+}
+
+@media (max-width: 991px) {
+    .content {
+        &__wrapper {
+            flex-direction: column;
+            &:has(.comments.active) {
+                column-gap: 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) { 
+    .content {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .content {
+        &__wrapper {
+            row-gap: 37px;
+        }
+        &__left {
+            display: flex;
+            flex-direction: column;
+        }
+        padding: 0 0 50px;
     }
 }

@@ -1,5 +1,10 @@
 .comments {
+    display: none;
+    &.active {
+        display: block;
+    }
     width: 520px;
+    flex-shrink: 0;
     &__wrapper {
         min-height: 430px;
         max-height: 100%;
@@ -24,8 +29,6 @@
             color: rgba($color: #fff, $alpha: 0.7);
         }
     }
-
-    
 
     #message {
         height: 118px;
@@ -205,6 +208,88 @@
             input {
                 width: 250px;
             }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .comments {
+        width: 100%;
+        &__wrapper {
+            padding: 30px 20px 22px;
+        }
+
+        &__name {
+            input {
+                width: 80%;
+            }
+        }
+
+        &__socials {
+            column-gap: 24px;
+            justify-content: left;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .comments {
+        width: 100vw;
+        align-self: center;
+        &__wrapper {
+            padding: 40px 10px 57px;
+        }
+        &__socials {
+            margin: 14px 0 0 0;
+            column-gap: 20px;
+            .icon {
+                height: 30px;
+                width: 30px;
+            }
+        }
+        &__name {
+            margin: 16px 0 0 0;
+            input {
+                width: 100%;
+                padding: 20px 20px;
+            }
+        }
+        &__share {
+            display: none;
+        }
+        &__input_descr {
+            font-size: 14px;
+            margin: 26px 0 0 0;
+        }
+        &__send {
+            margin: 14px 0 0 0;
+        }
+        &__messages {
+            margin: 31px 0 0 0;
+        }
+    }
+
+    .comment {
+        margin: 28px 0 0 0;
+        &__avatar {
+            height: 40px;
+            width: 40px;
+        }
+        &__username {
+            font-size: 16px;
+        }
+        &__time {
+            font-size: 12px;
+        }
+        &__message {
+            margin: 15px 0 0 0;
+        }
+        &__right_actions {
+            column-gap: 19px;
+        }
+        &__reactions {
+            font-size: 14px;
+            column-gap: 12px;
         }
     }
 }

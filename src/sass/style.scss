@@ -59,9 +59,9 @@ body {
         width: 90%;
     }
 }
-@media (max-width: 576px) {
+@media (max-width: 575px) {
     .container {
-        width: 98%
+        width: 94%
     }
 }
 
@@ -70,6 +70,6 @@ body {
 @import 'blocks/content';
 @import 'blocks/comments';
 @import 'blocks/video';
-@import 'blocks/baner';
+@import 'blocks/banner';
 @import 'blocks/earn';
 @import 'blocks/footer';
